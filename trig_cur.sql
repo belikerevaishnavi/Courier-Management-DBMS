@@ -1,3 +1,4 @@
+--Trigger to update tracking table when a new order is inserted
 delimiter $$
 create trigger up_order
 after insert on orders for each row
