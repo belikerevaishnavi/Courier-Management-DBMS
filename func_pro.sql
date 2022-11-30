@@ -1,4 +1,4 @@
-#1
+--1 Update ages of all employees and users using dob 
 delimiter $$
 create function find_age(dob date)
 	returns int
@@ -18,7 +18,8 @@ delimiter ;
 update personal_details set age = find_age(dob);
 select * from personal_details;
 
-#2
+
+--2 Update cost of all vehicles based on distance travelled
 delimiter $$
 create function find_cost(distance int)
 	returns int
@@ -34,7 +35,7 @@ delimiter ;
 update vehicle set cost = find_cost(distance);
 select * from vehicle;
 
-#3
+--3 Find the cost of a shipment based on its weight and travel cost
 delimiter $$
 create procedure update_tot_cost(in weight double, in cost int, in sid varchar(5))
 	begin
